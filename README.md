@@ -79,12 +79,12 @@ All model logs are outputted to `[SERVER_ID]_logs/` and power draw metrics to `[
 
 ```bibtex
     @thesis{XiaJulia2025,
-    author       = {JuliaXia},
-    title        = {Schrödinger’s Carbon: Until Measured, Operational Emissions Remain Uncertain},
-    school       = {MIT},
-    year         = {2025},
-    address      = {Cambridge},
-    month        = {May},
+        author       = {JuliaXia},
+        title        = {Schrödinger’s Carbon: Until Measured, Operational Emissions Remain Uncertain},
+        school       = {MIT},
+        year         = {2025},
+        address      = {Cambridge},
+        month        = {May},
     }
 ```
 
