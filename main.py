@@ -236,7 +236,7 @@ def get_model_command(model):
 
 def main():
     parser = argparse.ArgumentParser(description='Run inference benchmarks with GPU monitoring.')
-    parser.add_argument('--server_id', type=int, default=0,
+    parser.add_argument('--server_id', type=str, default="0",
                         help='Server ID (default: 0)')
     parser.add_argument('--model', type=str, default=None,
                         help='Comma-separated list of models to benchmark (resnet50, bert-large, sdxl-turbo, glc)')

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the benchmarking scripts for my Master's thesis, "Schrödinger’s Carbon: Until Measured, Operational Emissions Remain Uncertain." The thesis investigates the deployment, spatiotemporal, and computational profile variables that affect uncertainty in the operational carbon footprint estimation of artificial intelligent inference tasks.
+This repository contains the benchmarking scripts for my Master's thesis, "Schrödinger’s Carbon: Until Measured, Operational Emissions Remain Uncertain." The thesis investigates the deployment, spatiotemporal, and computational profile variables that affect uncertainty in operational carbon footprint estimations of artificial intelligence inference tasks.
 
 `Operational Carbon (gCO2eq) = Energy Consumed (kWh) * Carbon Intensity Factor (gCO2eq/kWh)`
 
@@ -13,7 +13,7 @@ To generate the dataset for the energy consumption factor in the equation above,
 3. SDXL-Turbo (Text-to-Image)
 4. GIT-Large Coco (Image Captioning)
 
-Models were chosen to reflect a diverse array of task types. ResNet50 and BERT-Large were ran using MLPerf benchmarks[1]. SDXL-Turbo and GIT-Large-Coco were models chosen from HuggingFace and benchmarked with the dataset used by AI Energy Score[2].
+Models were chosen to reflect a diverse array of task types. ResNet50 and BERT-Large were ran using MLPerf benchmarks[1]. SDXL-Turbo and GIT-Large-Coco were models chosen from HuggingFace and benchmarked with the dataset from AI Energy Score[2].
 
 This repository contains the code used to execute and monitor the GPU power usage for each model. Power measurements were recorded using `nvidia-smi` [3].
 
@@ -34,7 +34,7 @@ uncertainty_benchmarking/
 
 ### Prerequisites
 
-The experiments were conducted on 12 NVIDIA RTX6000 nodes on CHI@UC cluster on Chameleon Cloud[4]. All nodes ran Ubuntu 22.04 LTS with CUDA 12.0. If running on a different setup, adjustments will need to be to made to `installation.sh`. Python 3.6^ is required to run benchmarking scripts.
+The experiments were conducted on 12 NVIDIA RTX6000 nodes on CHI@UC cluster on Chameleon Cloud[4]. All nodes ran Ubuntu 22.04 LTS with CUDA 12.0. If running on a different setup, adjustments will need to be to made to `installation.sh`. Python ≥3.6 is required to run benchmarking scripts.
 
 1. Clone the repository.
 
@@ -69,7 +69,7 @@ source mlc/bin/activate
 python main.py --model=sdxl-turbo
 
 # Run 3 iterations of Resnet50 and Bert-Large on nc05 server
-python main.py --server_id="nc05" --model=resnet50,bert-large --iterations=3
+python main.py --server_id=nc05 --model=resnet50,bert-large --iterations=3
 
 ```
 
