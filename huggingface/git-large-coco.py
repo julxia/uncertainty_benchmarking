@@ -21,7 +21,6 @@ def run_inference():
 
     print(f"Running inference on {device}")
 
-    print("Loading model and processor...")
     model_name = "microsoft/git-large-coco"
     try:
         processor = AutoProcessor.from_pretrained(model_name)

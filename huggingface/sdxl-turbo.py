@@ -6,7 +6,7 @@ from datasets import load_dataset
 from diffusers import AutoPipelineForText2Image
 
 def format_timestamp(timestamp):
-    """Format a Unix timestamp to YYYY/MM/DD HH:MM:SS.mmm format"""
+    """Format Unix timestamp to YYYY/MM/DD HH:MM:SS.mmm"""
     return datetime.fromtimestamp(timestamp).strftime('%Y/%m/%d %H:%M:%S.%f')[:-3]
     
 def run_inference():
@@ -35,6 +35,7 @@ def run_inference():
         sys.exit(1)
 
     print("Loading dataset...")
+
     try:
         dataset = load_dataset("AIEnergyScore/image_generation", split="train")
     except Exception as e:
@@ -49,7 +50,6 @@ def run_inference():
 
     for i in range(0, len(dataset), batch_size):
         batch = dataset[i:i+batch_size]
-        # print(batch['prompt'])
         prompts = batch["prompt"]
         
         for prompt in prompts:
