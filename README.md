@@ -15,7 +15,7 @@ To generate the dataset for the energy consumption factor in the equation above,
 
 Models were chosen to reflect a diverse array of task types. ResNet50 and BERT-Large were ran using MLPerf benchmarks[1]. SDXL-Turbo and GIT-Large-Coco were models chosen from HuggingFace and benchmarked with the dataset from AI Energy Score[2].
 
-This repository contains the code used to execute and monitor the GPU power usage for each model. Power measurements were recorded using `nvidia-smi` [3].
+This repository contains the code used to execute and monitor the GPU power usage for each model. Power measurements were recorded using `nvidia-smi` [3]. Claude AI[4] was used to help implement the initial code scaffolding and debugging. All generated code was reviewed and tested to ensure intended functionality.
 
 # Repository Structure
 
@@ -34,7 +34,7 @@ uncertainty_benchmarking/
 
 ### Prerequisites
 
-The experiments were conducted on 12 NVIDIA RTX6000 nodes on CHI@UC cluster on Chameleon Cloud[4]. All nodes ran Ubuntu 22.04 LTS with CUDA 12.0. If running on a different setup, adjustments will need to be to made to `installation.sh`. Python ≥3.6 is required to run benchmarking scripts.
+The experiments were conducted on 12 NVIDIA RTX6000 nodes on CHI@UC cluster on Chameleon Cloud[5]. All nodes ran Ubuntu 22.04 LTS with CUDA 12.0. If running on a different setup, adjustments will need to be to made to `installation.sh`. Python ≥3.6 is required to run benchmarking scripts.
 
 1. Clone the repository.
 
@@ -96,4 +96,6 @@ All model logs are outputted to `[SERVER_ID]_logs/` and power draw metrics to `[
 
 [3] NVIDIA Corporation. NVIDIA System Management Interface (nvidia-smi). url: https://developer.nvidia.com/system-management-interface.
 
-[4] K. Keahey et al. “Lessons Learned from the Chameleon Testbed”. In: Proceedings of the 2020 USENIX Annual Technical Conference (USENIX ATC ’20). USENIX Association, July 2020
+[4] Anthropic. Claude AI Large Language Model. 2025. url: https://claude.ai.
+
+[5] K. Keahey et al. “Lessons Learned from the Chameleon Testbed”. In: Proceedings of the 2020 USENIX Annual Technical Conference (USENIX ATC ’20). USENIX Association, July 2020
